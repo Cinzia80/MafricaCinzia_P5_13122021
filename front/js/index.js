@@ -15,7 +15,7 @@ async function fetchListProduits() {
 
             // Insertion de l'élément "a"
             let productLink = document.createElement("a");
-            document.querySelector(".items").appendChild(productLink);
+            document.querySelectorAll(".items").appendChild(productLink);
             productLink.href = `product.html?id=${resultatAPI[produit]._id}`;
 
             // Insertion de l'élément "produit"
@@ -25,13 +25,13 @@ async function fetchListProduits() {
             // Insertion de l'image
             let productImg = document.createElement("img");
             productArticle.appendChild(productImg);
-            productImg.src = resultatAPI[produit].imageUrl;
+            productImg.src = resultatAPI[produit].imageUrl = "http://localhost:3000/images/kanap01.jpeg";
             productImg.alt = resultatAPI[produit].altTxt;
 
             // Insertion du titre "h3"
             let productName = document.createElement("h3");
             productArticle.appendChild(productName);
-            productName.classList.add("productName");
+            productName.classList.add("productName") ="Kanap Sinopé" ;
             productName.innerHTML = resultatAPI[produit].name;
 
             // Insertion du "price"
