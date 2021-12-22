@@ -9,7 +9,7 @@ async function getProduits() {
 async function fetchListProduits() {
     var result = await getProduits()
     .then(function (resultatAPI){
-        const produits = resultatAPI;
+        let produits = resultatAPI;
         console.log(produits);
         for (let produit in produits) {
 
@@ -25,13 +25,13 @@ async function fetchListProduits() {
             // Insertion de l'image
             let productImg = document.createElement("img");
             productArticle.appendChild(productImg);
-            productImg.src = resultatAPI[produit].imageUrl = "http://localhost:3000/images/kanap01.jpeg";
+            productImg.src = resultatAPI[produit].imageUrl;
             productImg.alt = resultatAPI[produit].altTxt;
 
             // Insertion du titre "h3"
             let productName = document.createElement("h3");
             productArticle.appendChild(productName);
-            productName.classList.add("productName") ="Kanap Sinopé" ;
+            productName.classList.add("productName");
             productName.innerHTML = resultatAPI[produit].name;
 
             // Insertion du "price"

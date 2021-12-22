@@ -34,7 +34,6 @@
           <nav>
             <ul>
               <a href="./index.html"><li>Accueil</li></a>
-              <a href="./product.html"><li>Article</li></a>
               <a href="./cart.html"><li>Panier</li></a>
             </ul>
           </nav>
@@ -48,13 +47,13 @@
         <section class="item">
           <article>
             <div class="item__img">
-              <img src="http://localhost:3000/images/kanap01.jpeg" alt="Photo d'un canapé bleu, deux places"> 
+              <!-- <img src="../images/logo.png" alt="Photographie d'un canapé"> -->
             </div>
             <div class="item__content">
 
               <div class="item__content__titlePrice">
-                <h1 id="title">Kanap Sinopé!</h1>
-                <p>Prix : <span id="price">1849</span>€</p>
+                <h1 id="title"><!-- Nom du produit --></h1>
+                <p>Prix : <span id="price"><!-- 42 --></span>€</p>
               </div>
 
               <div class="item__content__description">
@@ -67,9 +66,8 @@
                   <label for="color-select">Choisir une couleur :</label>
                   <select name="color-select" id="colors">
                       <option value="">--SVP, choisissez une couleur --</option>
-                      <option value="blue">blue</option>
-                      <option value="noir">noir</option>
-                      <option value="blanc">blanc</option>
+<!--                       <option value="vert">vert</option>
+                      <option value="blanc">blanc</option> -->
                   </select>
                 </div>
 
@@ -82,283 +80,9 @@
               <div class="item__content__addButton">
                 <button id="addToCart">Ajouter au panier</button>
               </div>
+
             </div>
-            </article>
-
-            <article>
-            <div class="item__img">
-              <img src="http://localhost:3000/images/kanap02.jpeg" alt="Photo d'un canapé bleu, deux places"> 
-            </div>
-            <div class="item__content">
-
-              <div class="item__content__titlePrice">
-                <h1 id="title">Kanap Cyllène</h1>
-                <p>Prix : <span id="price">4499</span>€</p>
-              </div>
-
-              <div class="item__content__description">
-                <p class="item__content__description__title">Description :</p>
-                <p id="description"><!-- Dis enim malesuada risus sapien gravida nulla nisl arcu. --></p>
-              </div>
-
-              <div class="item__content__settings">
-                <div class="item__content__settings__color">
-                  <label for="color-select">Choisir une couleur :</label>
-                  <select name="color-select" id="colors">
-                      <option value="">--SVP, choisissez une couleur --</option>
-                      <option value="noir/jeune">noir/jeune</option>
-                      <option value="noir/rouge">noir/rouge</option>
-                  </select>
-                </div>
-
-                <div class="item__content__settings__quantity">
-                  <label for="itemQuantity">Nombre d'article(s) (1-100) :</label>
-                  <input type="number" name="itemQuantity" min="1" max="100" value="0" id="quantity">
-                </div>
-              </div>
-
-              <div class="item__content__addButton">
-                <button id="addToCart">Ajouter au panier</button>
-              </div>
-            </div>
-            </article>
-
-            <article>
-            <div class="item__img">
-              <img src="http://localhost:3000/images/kanap03.jpeg" alt="Photo d'un canapé bleu, deux places"> 
-            </div>
-            <div class="item__content">
-
-              <div class="item__content__titlePrice">
-                <h1 id="title">Kanap Calycé</h1>
-                <p>Prix : <span id="price">3199</span>€</p>
-              </div>
-
-              <div class="item__content__description">
-                <p class="item__content__description__title">Description :</p>
-                <p id="description"><!-- Dis enim malesuada risus sapien gravida nulla nisl arcu. --></p>
-              </div>
-
-              <div class="item__content__settings">
-                <div class="item__content__settings__color">
-                  <label for="color-select">Choisir une couleur :</label>
-                  <select name="color-select" id="colors">
-                      <option value="">--SVP, choisissez une couleur --</option>
-                      <option value="vert">vert</option>
-                      <option value="rouge">rouge</option>
-                      <option value="orange">orange</option>
-                  </select>
-                </div>
-
-                <div class="item__content__settings__quantity">
-                  <label for="itemQuantity">Nombre d'article(s) (1-100) :</label>
-                  <input type="number" name="itemQuantity" min="1" max="100" value="0" id="quantity">
-                </div>
-              </div>
-
-              <div class="item__content__addButton">
-                <button id="addToCart">Ajouter au panier</button>
-              </div>
-            </div>
-            </article>
-
-            <article>
-              <div class="item__img">
-                <img src="http://localhost:3000/images/kanap04.jpeg" alt="Photo d'un canapé bleu, deux places"> 
-              </div>
-              <div class="item__content">
-  
-                <div class="item__content__titlePrice">
-                  <h1 id="title">Kanap Autonoé</h1>
-                  <p>Prix : <span id="price">1499</span>€</p>
-                </div>
-  
-                <div class="item__content__description">
-                  <p class="item__content__description__title">Description :</p>
-                  <p id="description"><!-- Dis enim malesuada risus sapien gravida nulla nisl arcu. --></p>
-                </div>
-  
-                <div class="item__content__settings">
-                  <div class="item__content__settings__color">
-                    <label for="color-select">Choisir une couleur :</label>
-                    <select name="color-select" id="colors">
-                        <option value="">--SVP, choisissez une couleur --</option>
-                        <option value="rose">rose</option> 
-                        <option value="blanc">blanc</option>
-                    </select>
-                  </div>
-  
-                  <div class="item__content__settings__quantity">
-                    <label for="itemQuantity">Nombre d'article(s) (1-100) :</label>
-                    <input type="number" name="itemQuantity" min="1" max="100" value="0" id="quantity">
-                  </div>
-                </div>
-  
-                <div class="item__content__addButton">
-                  <button id="addToCart">Ajouter au panier</button>
-                </div>
-  
-              </div>
-              </article>
-        </section>
-        <section>
-              <article>
-                <div class="item__img">
-                  <img src="http://localhost:3000/images/kanap05.jpeg" alt="Photo d'un canapé bleu, deux places"> 
-                </div>
-                <div class="item__content">
-    
-                  <div class="item__content__titlePrice">
-                    <h1 id="title">Kanap Eurydomé</h1>
-                    <p>Prix : <span id="price">2249</span>€</p>
-                  </div>
-    
-                  <div class="item__content__description">
-                    <p class="item__content__description__title">Description :</p>
-                    <p id="description"><!-- Dis enim malesuada risus sapien gravida nulla nisl arcu. --></p>
-                  </div>
-    
-                  <div class="item__content__settings">
-                    <div class="item__content__settings__color">
-                      <label for="color-select">Choisir une couleur :</label>
-                      <select name="color-select" id="colors">
-                          <option value="">--SVP, choisissez une couleur --</option>
-                          <option value="blue">blue</option>
-                          <option value="noir">noir</option>
-                          <option value="blanc">blanc</option>
-                      </select>
-                    </div>
-    
-                    <div class="item__content__settings__quantity">
-                      <label for="itemQuantity">Nombre d'article(s) (1-100) :</label>
-                      <input type="number" name="itemQuantity" min="1" max="100" value="0" id="quantity">
-                    </div>
-                  </div>
-    
-                  <div class="item__content__addButton">
-                    <button id="addToCart">Ajouter au panier</button>
-                  </div>
-                </div>
-                </article>
-
-                <article>
-                  <div class="item__img">
-                    <img src="http://localhost:3000/images/kanap06.jpeg" alt="Photo d'un canapé bleu, deux places"> 
-                  </div>
-                  <div class="item__content">
-      
-                    <div class="item__content__titlePrice">
-                      <h1 id="title">Kanap Hélicé</h1>
-                      <p>Prix : <span id="price">999</span>€</p>
-                    </div>
-      
-                    <div class="item__content__description">
-                      <p class="item__content__description__title">Description :</p>
-                      <p id="description"><!-- Dis enim malesuada risus sapien gravida nulla nisl arcu. --></p>
-                    </div>
-      
-                    <div class="item__content__settings">
-                      <div class="item__content__settings__color">
-                        <label for="color-select">Choisir une couleur :</label>
-                        <select name="color-select" id="colors">
-                            <option value="">--SVP, choisissez une couleur --</option>
-                            <option value="blue">blue</option>
-                            <option value="noir">noir</option>
-                            <option value="blanc">blanc</option>
-                        </select>
-                      </div>
-      
-                      <div class="item__content__settings__quantity">
-                        <label for="itemQuantity">Nombre d'article(s) (1-100) :</label>
-                        <input type="number" name="itemQuantity" min="1" max="100" value="0" id="quantity">
-                      </div>
-                    </div>
-      
-                    <div class="item__content__addButton">
-                      <button id="addToCart">Ajouter au panier</button>
-                    </div>
-                  </div>
-                  </article>
-
-                  <article>
-                    <div class="item__img">
-                      <img src="http://localhost:3000/images/kanap07.jpeg" alt="Photo d'un canapé bleu, deux places"> 
-                    </div>
-                    <div class="item__content">
-        
-                      <div class="item__content__titlePrice">
-                        <h1 id="title">Kanap Thyoné</h1>
-                        <p>Prix : <span id="price">1999</span>€</p>
-                      </div>
-        
-                      <div class="item__content__description">
-                        <p class="item__content__description__title">Description :</p>
-                        <p id="description"><!-- Dis enim malesuada risus sapien gravida nulla nisl arcu. --></p>
-                      </div>
-        
-                      <div class="item__content__settings">
-                        <div class="item__content__settings__color">
-                          <label for="color-select">Choisir une couleur :</label>
-                          <select name="color-select" id="colors">
-                              <option value="">--SVP, choisissez une couleur --</option>
-                              <option value="blue">blue</option>
-                              <option value="noir">noir</option>
-                              <option value="blanc">blanc</option>
-                          </select>
-                        </div>
-        
-                        <div class="item__content__settings__quantity">
-                          <label for="itemQuantity">Nombre d'article(s) (1-100) :</label>
-                          <input type="number" name="itemQuantity" min="1" max="100" value="0" id="quantity">
-                        </div>
-                      </div>
-        
-                      <div class="item__content__addButton">
-                        <button id="addToCart">Ajouter au panier</button>
-                      </div>
-                    </div>
-                    </article>
-
-                    
-                  <article>
-                    <div class="item__img">
-                      <img src="http://localhost:3000/images/kanap08.jpeg" alt="Photo d'un canapé bleu, deux places"> 
-                    </div>
-                    <div class="item__content">
-        
-                      <div class="item__content__titlePrice">
-                        <h1 id="title">Kanap Orthosie</h1>
-                        <p>Prix : <span id="price">3999</span>€</p>
-                      </div>
-        
-                      <div class="item__content__description">
-                        <p class="item__content__description__title">Description :</p>
-                        <p id="description"><!-- Dis enim malesuada risus sapien gravida nulla nisl arcu. --></p>
-                      </div>
-        
-                      <div class="item__content__settings">
-                        <div class="item__content__settings__color">
-                          <label for="color-select">Choisir une couleur :</label>
-                          <select name="color-select" id="colors">
-                              <option value="">--SVP, choisissez une couleur --</option>
-                              <option value="blue">blue</option>
-                              <option value="noir">noir</option>
-                              <option value="blanc">blanc</option>
-                          </select>
-                        </div>
-        
-                        <div class="item__content__settings__quantity">
-                          <label for="itemQuantity">Nombre d'article(s) (1-100) :</label>
-                          <input type="number" name="itemQuantity" min="1" max="100" value="0" id="quantity">
-                        </div>
-                      </div>
-        
-                      <div class="item__content__addButton">
-                        <button id="addToCart">Ajouter au panier</button>
-                      </div>
-                    </div>
-                    </article>
-   
+          </article>
         </section>
       </div>
     </main>
@@ -382,10 +106,10 @@
       </div>
       <div class="limitedWidthBlockContainer footerSecondary">
         <div class="limitedWidthBlock">
-          <p>© Copyright 2021 - 2042 | Openclassrooms by Openclassrooms | All Rights Reserved | Powered by <3</p>
+          <p>© Copyright 2021 | Openclassrooms by Cinzia MAFRICA | All Rights Reserved</p>
         </div>
       </div>
     </footer>
-  <script src="../js/index.js"></script>
+  <script src="../js/product.js"></script>
   </body>
 </html>
