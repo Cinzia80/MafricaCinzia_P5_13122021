@@ -9,13 +9,13 @@ async function getProduits() {
 async function fetchListProduits() {
     var result = await getProduits()
     .then(function (resultatAPI){
-        let produits = resultatAPI;
+        const produits = resultatAPI;
         console.log(produits);
         for (let produit in produits) {
 
             // Insertion de l'élément "a"
             let productLink = document.createElement("a");
-            document.querySelectorAll(".items").appendChild(productLink);
+            document.querySelector(".items").appendChild(productLink);
             productLink.href = `product.html?id=${resultatAPI[produit]._id}`;
 
             // Insertion de l'élément "produit"
