@@ -9,15 +9,15 @@ console.log(requeteId);
 //Récupération des détails du produit depuis l'API
     fetch(`http://localhost:3000/api/products/${requeteId}`)
       .then(response => response.json())
-      .then(data => {
-        console.log(data);
+      .then(product => {
+        console.log(product);
 //Ajout des détails dans la page produit
         function ajoutProduit() {
-          const image = document.querySelector(".item__img").innerHTML = `<img  id="image" src="${data.imageUrl}" alt="${data.altTxt}">`;
-          const titre =  document.getElementById("title").innerHTML = `<h1 id="title">${data.name}</h1>`;
-          const prix = document.getElementById("price").innerHTML = `<span id="price">${data.price}</span>`;
-          const description = document.getElementById("description").innerHTML = `<p id="description">${data.description}</p>`; 
-          const couleurs = data.colors;
+          const image = document.querySelector(".item__img").innerHTML = `<img  id="image" src="${product.imageUrl}" alt="${product.altTxt}">`;
+          const titre =  document.getElementById("title").innerHTML = `<h1 id="title">${product.name}</h1>`;
+          const prix = document.getElementById("price").innerHTML = `<span id="price">${product.price}</span>`;
+          const description = document.getElementById("description").innerHTML = `<p id="description">${product.description}</p>`; 
+          const couleurs = product.colors;
 //Boucle pour parcourir les differentes couleurs
         function ajoutCouleurs() {
           for(let couleur of couleurs) {

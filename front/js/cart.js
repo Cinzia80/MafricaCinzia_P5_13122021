@@ -1,15 +1,15 @@
 
-//Récupération du local storage
+//Reprise du local storage
 let ajoutProduitStorage = JSON.parse(localStorage.getItem("articles"));
 const affichagePanier = document.querySelector("#cart__items");
-
+console.log (ajoutProduitStorage);
 function affichageProduits() {
 //Si le panier est vide
  if(ajoutProduitStorage === null || ajoutProduitStorage == 0) {
   const panierVide = `<p> Le panier est vide </p>`;
    affichagePanier.innerHTML = panierVide;
 }
-//Boucle pour parcourir les élements dans le local storage
+//Boucle pour consulter les produits dans le local storage
 else {
     for(let i = 0; i < ajoutProduitStorage.length; i++) {
        let prixArticle = ajoutProduitStorage[i].prix * ajoutProduitStorage[i].quantité;
