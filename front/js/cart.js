@@ -64,7 +64,7 @@ function totalPanier() {
 }
 totalPanier();
 
-//Fonction pour supprimer un produit
+//Fonction pour effacer un produit
 function supprimerProduit() {
   const suppressionArticle = document.querySelectorAll(".deleteItem");
   for (let i = 0; i < suppressionArticle.length; i++) {
@@ -79,7 +79,7 @@ function supprimerProduit() {
 }
 supprimerProduit();
 
-//Fonction pour vider entierement le panier
+//Fonction de vidage de tout le contenu du panier
 function supprimerPanier() {
  const viderPanier = document.getElementById("cart__delete");
  viderPanier.addEventListener("click", (event) => {
@@ -91,7 +91,7 @@ function supprimerPanier() {
 }
 supprimerPanier();
 
-//Fonction pour changer la quantité d'un article
+//Fonction pour modifier la quantité d'un article
 function changerQuantite() {
   let selectionQuantite = document.querySelectorAll(".itemQuantity");
     for(let i = 0; i < selectionQuantite.length; i ++) {
@@ -122,15 +122,17 @@ let formulaire = document.querySelector(".cart__order__form");
  
 //Vérification des données saisies par l'utilisateur
 
-//Ecoute de la modification du prénom
+//Fonction pour modifier le prénom
 formulaire.firstName.addEventListener("input", function () {
   prenomValide(this);
 });
 
+
 const prenomValide = function (inputPrenom) {
-//Création de la regex pour valider le prénom
-  let prenomRegex = new RegExp("^[-'a-zA-ZÀ-ÖØ-öø-ÿ\s]{2,}$", "g");
-//Test de la regex prénom
+//Création de la variable regex pour la validation du prénom
+const validationName = new RegExp("^[-'a-zA-ZÀ-ÖØ-öø-ÿ\s_ ]{2,}$", "g");
+  let prenomRegex = validationName;
+//Control de la regex prénom
   let testPrenom = prenomRegex.test(inputPrenom.value);
    if(testPrenom) {
      inputPrenom.nextElementSibling.innerHTML = "";
@@ -142,7 +144,7 @@ const prenomValide = function (inputPrenom) {
   }
  };
   
-//Ecoute de la modification du nom
+//Suivre de la modification du nom
 formulaire.lastName.addEventListener("input", function () {
     nomValide(this);
 });
@@ -160,7 +162,7 @@ const nomValide = function (inputNom) {
     }
   };
  
-//Ecoute de la modification de l'adresse
+//Suivre de la modification de l'adresse
 formulaire.address.addEventListener("input", function () {
     adresseValide(this);
 });
@@ -178,7 +180,7 @@ formulaire.address.addEventListener("input", function () {
     }
   };
  
-//Ecoute de la modification de la ville
+//Suivre de la modification de la ville
 formulaire.city.addEventListener("input", function () {
     villeValide(this);
 });
@@ -196,7 +198,7 @@ formulaire.city.addEventListener("input", function () {
     }
   };
 
-//Ecoute de la modification de l'email
+//Suivre de la modification de l'email
 formulaire.email.addEventListener("input", function() {
     emailValide(this);
  });
@@ -218,7 +220,7 @@ function validerCommande () {
    const boutonCommande = document.getElementById("order");
     boutonCommande.addEventListener("click", (event) => {
       event.preventDefault();
-//Si le formulaire ne comporte aucune erreur
+//S'il n'y a pas d'erreurs dans le formulaire
       if(
         prenomValide(formulaire.firstName) &&
         nomValide(formulaire.lastName) &&
@@ -231,7 +233,7 @@ function validerCommande () {
       for(let i = 0; i < ajoutProduitStorage.length; i++) {
         produits.push(ajoutProduitStorage[i].id);
       }
-//Création d'un objet contact à partir des données du formulaire
+//Création d'un élément de contact à travers les données du formulaire
     const objetContact = {
       contact: {
         firstName :formulaire.firstName.value,
@@ -242,7 +244,7 @@ function validerCommande () {
        },
         products: produits
     };
-//Requete POST pour envoyer les données à l'API et récupérer l'identifiant de commande
+//Requete POST pour envoyer des données à l'API et récupérer l'ID de la commande.
    const post = {
     method: "POST",
     body: JSON.stringify(objetContact),
